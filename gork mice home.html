@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mice Home • Cozy Habitats for Mice & Rats</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        .tail-text {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
+        }
+        .mouse-paw {
+            animation: wiggle 3s infinite;
+        }
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-8deg); }
+            50% { transform: rotate(8deg); }
+        }
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .product-card:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        }
+    </style>
+</head>
+<body class="tail-text bg-gradient-to-br from-pink-50 via-amber-50 to-lime-50 text-neutral-800 overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-x-3">
+                <div class="w-12 h-12 bg-lime-400 rounded-2xl flex items-center justify-center text-4xl mouse-paw">🐭</div>
+                <div>
+                    <span class="text-3xl font-bold tracking-tighter text-lime-600">Mice</span>
+                    <span class="text-3xl font-bold tracking-tighter text-amber-600">Home</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="#home" class="hover:text-lime-600 transition">Home</a>
+                <a href="#shop" class="hover:text-lime-600 transition">Shop Habitats</a>
+                <a href="#about" class="hover:text-lime-600 transition">Our Story</a>
+                <a href="#tips" class="hover:text-lime-600 transition">Care Tips</a>
+                <a href="#contact" class="hover:text-lime-600 transition">Contact</a>
+            </div>
+            
+            <div class="flex items-center gap-x-4">
+                <button onclick="alert('🛒 Cart coming soon! In the real version this would open your cart ❤️')" 
+                        class="flex items-center gap-x-2 bg-white border-2 border-lime-600 hover:bg-lime-100 px-5 py-2.5 rounded-3xl text-sm font-semibold transition">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart (0)</span>
+                </button>
+                <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
+                        class="bg-lime-600 text-white px-7 py-2.5 rounded-3xl text-sm font-semibold hover:bg-lime-700 transition">
+                    Get a Home
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero-bg h-screen flex items-center text-white relative">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-x-2 bg-white/20 backdrop-blur-md px-6 py-2 rounded-3xl mb-8">
+                <span class="text-amber-300 text-xl">🐀</span>
+                <span class="uppercase tracking-[4px] text-xs font-medium">Since 2023 • Handcrafted in India</span>
+            </div>
+            
+            <h1 class="text-7xl md:text-8xl font-bold leading-none tracking-tighter mb-6">
+                The coziest<br>homes for your<br>tiny best friends
+            </h1>
+            <p class="text-2xl max-w-lg mx-auto mb-10 text-white/90">
+                Premium habitats for pet mice &amp; rats. 
+                Built with love, designed for happiness.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#shop" 
+                   class="bg-white text-lime-700 font-semibold text-lg px-10 py-5 rounded-3xl flex items-center justify-center gap-x-3 hover:scale-105 transition">
+                    🛍️ Shop Habitats Now
+                </a>
+                <a href="#about" 
+                   class="border-2 border-white font-semibold text-lg px-10 py-5 rounded-3xl flex items-center justify-center gap-x-3 hover:bg-white/10 transition">
+                    Learn our story →
+                </a>
+            </div>
+            
+            <div class="mt-16 flex justify-center gap-x-8 text-sm">
+                <div class="flex items-center gap-x-2">
+                    <i class="fa-solid fa-heart text-red-400"></i>
+                    <span>1,284 happy rodents</span>
+                </div>
+                <div class="flex items-center gap-x-2">
+                    <i class="fa-solid fa-shield-halved text-lime-400"></i>
+                    <span>2-year warranty</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- floating paw prints -->
+        <div class="absolute bottom-10 right-10 text-6xl opacity-30 animate-bounce">🐾</div>
+        <div class="absolute top-32 left-10 text-5xl opacity-30 rotate-12">🐾</div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="bg-white py-6 border-b">
+        <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-x-12 gap-y-4 text-sm items-center opacity-75">
+            <div class="flex items-center gap-x-3">
+                <i class="fa-solid fa-truck text-lime-600"></i>
+                <span class="font-medium">Free shipping over ₹2,999</span>
+            </div>
+            <div class="flex items-center gap-x-3">
+                <i class="fa-solid fa-leaf text-lime-600"></i>
+                <span class="font-medium">Eco-friendly wood &amp; recycled materials</span>
+            </div>
+            <div class="flex items-center gap-x-3">
+                <i class="fa-solid fa-medal text-lime-600"></i>
+                <span class="font-medium">Vet-approved designs</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHOP SECTION -->
+    <section id="shop" class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center mb-16">
+            <span class="uppercase tracking-widest text-lime-600 text-sm font-semibold">Our Bestsellers</span>
+            <h2 class="text-5xl font-bold tracking-tighter mt-3">Choose their forever home</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- Product 1 -->
+            <div class="product-card bg-white rounded-3xl overflow-hidden shadow-xl">
+                <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/201/800/600')"></div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-2xl">The Snuggle Den</h3>
+                            <p class="text-neutral-500 text-sm">For mice • 2 levels • 45×35 cm</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="block text-3xl font-bold text-lime-600">₹1,999</span>
+                        </div>
+                    </div>
+                    <p class="text-sm mt-4 line-clamp-3 text-neutral-600">
+                        Perfect starter home with cozy fleece bedding area, chew-safe ramps, and a built-in wheel.
+                    </p>
+                    <button onclick="addToCart(this)" 
+                            class="mt-6 w-full bg-lime-600 hover:bg-lime-700 text-white py-4 rounded-2xl font-medium transition">
+                        Add to cart 🛒
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card bg-white rounded-3xl overflow-hidden shadow-xl">
+                <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/29/800/600')"></div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-2xl">The Explorer Loft</h3>
+                            <p class="text-neutral-500 text-sm">For rats • 3 levels • 70×45 cm</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="block text-3xl font-bold text-lime-600">₹4,299</span>
+                        </div>
+                    </div>
+                    <p class="text-sm mt-4 line-clamp-3 text-neutral-600">
+                        Multi-level mansion with tunnels, platforms, and a panoramic viewing window for happy climbing.
+                    </p>
+                    <button onclick="addToCart(this)" 
+                            class="mt-6 w-full bg-lime-600 hover:bg-lime-700 text-white py-4 rounded-2xl font-medium transition">
+                        Add to cart 🛒
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card bg-white rounded-3xl overflow-hidden shadow-xl">
+                <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/160/800/600')"></div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-2xl">The Burrow Box</h3>
+                            <p class="text-neutral-500 text-sm">For mice &amp; rats • Hideaway</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="block text-3xl font-bold text-lime-600">₹899</span>
+                        </div>
+                    </div>
+                    <p class="text-sm mt-4 line-clamp-3 text-neutral-600">
+                        Natural coconut fiber burrow with soft bedding pocket. Stackable and perfect for hiding.
+                    </p>
+                    <button onclick="addToCart(this)" 
+                            class="mt-6 w-full bg-lime-600 hover:bg-lime-700 text-white py-4 rounded-2xl font-medium transition">
+                        Add to cart 🛒
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card bg-white rounded-3xl overflow-hidden shadow-xl">
+                <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/201/800/600')"></div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-2xl">The Palace Suite</h3>
+                            <p class="text-neutral-500 text-sm">Luxury for rats • 4 levels</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="block text-3xl font-bold text-lime-600">₹7,499</span>
+                        </div>
+                    </div>
+                    <p class="text-sm mt-4 line-clamp-3 text-neutral-600">
+                        The ultimate rodent resort: glass viewing walls, LED mood lighting, and a rooftop garden area.
+                    </p>
+                    <button onclick="addToCart(this)" 
+                            class="mt-6 w-full bg-lime-600 hover:bg-lime-700 text-white py-4 rounded-2xl font-medium transition">
+                        Add to cart 🛒
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12">
+            <a href="#" class="inline-flex items-center gap-x-3 text-lime-600 font-medium hover:gap-x-5 transition">
+                View full collection 
+                <span class="text-2xl">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <img src="https://picsum.photos/id/1016/900/700" 
+                     alt="Our workshop" 
+                     class="rounded-3xl shadow-2xl">
+            </div>
+            <div class="space-y-8">
+                <div class="max-w-md">
+                    <span class="px-4 py-1.5 bg-amber-100 text-amber-700 rounded-3xl text-xs font-semibold">OUR STORY</span>
+                    <h2 class="text-5xl font-bold tracking-tighter mt-6 leading-none">
+                        We believe every little paw deserves a palace
+                    </h2>
+                    <p class="mt-8 text-lg text-neutral-600">
+                        Founded in Hyderabad by two rodent-loving engineers (and their 12 pet rats), Mice Home creates 
+                        habitats that feel like home — not just cages. Every piece is hand-finished with non-toxic, 
+                        chew-safe materials so your tiny family members can explore, burrow, and snooze in total bliss.
+                    </p>
+                    <div class="mt-10 flex items-center gap-x-6">
+                        <div class="text-6xl">🐭</div>
+                        <div>
+                            <div class="font-semibold">Rahul &amp; Priya Sharma</div>
+                            <div class="text-sm text-neutral-500">Founders &amp; Chief Rodent Officers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="py-20 bg-gradient-to-r from-lime-50 to-amber-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-3xl text-center">
+                    <div class="w-16 h-16 mx-auto bg-lime-100 rounded-2xl flex items-center justify-center text-4xl mb-6">🌿</div>
+                    <h3 class="font-semibold text-2xl mb-3">100% Natural</h3>
+                    <p class="text-neutral-600">Untreated pine, coconut shells, and recycled cardboard — never plastic that can harm tiny teeth.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl text-center">
+                    <div class="w-16 h-16 mx-auto bg-amber-100 rounded-2xl flex items-center justify-center text-4xl mb-6">🧠</div>
+                    <h3 class="font-semibold text-2xl mb-3">Enrichment Built-In</h3>
+                    <p class="text-neutral-600">Every habitat includes tunnels, wheels, and hideouts to keep your pets mentally stimulated.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl text-center">
+                    <div class="w-16 h-16 mx-auto bg-pink-100 rounded-2xl flex items-center justify-center text-4xl mb-6">🛡️</div>
+                    <h3 class="font-semibold text-2xl mb-3">Easy to Clean</h3>
+                    <p class="text-neutral-600">Removable floors and dishwasher-safe parts make weekly cleaning a 5-minute job.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold">What happy owners say</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl">
+                <p class="italic">"My rat boys finally stopped chewing the bars! The Explorer Loft is their new kingdom. 10/10 would buy again."</p>
+                <div class="mt-8 flex items-center gap-x-4">
+                    <div class="w-10 h-10 bg-neutral-200 rounded-full"></div>
+                    <div>
+                        <div class="font-medium">Arjun Patel, Mumbai</div>
+                        <div class="text-xs text-neutral-500">3 fancy rats</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-3xl">
+                <p class="italic">"The Snuggle Den arrived yesterday and my mouse immediately claimed the top floor. She’s happier than ever!"</p>
+                <div class="mt-8 flex items-center gap-x-4">
+                    <div class="w-10 h-10 bg-neutral-200 rounded-full"></div>
+                    <div>
+                        <div class="font-medium">Sneha Rao, Hyderabad</div>
+                        <div class="text-xs text-neutral-500">2 pet mice</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-3xl">
+                <p class="italic">"The quality is insane. My rats are 2 years old and still exploring every level like it’s brand new."</p>
+                <div class="mt-8 flex items-center gap-x-4">
+                    <div class="w-10 h-10 bg-neutral-200 rounded-full"></div>
+                    <div>
+                        <div class="font-medium">Vikram Singh, Bangalore</div>
+                        <div class="text-xs text-neutral-500">4 rats</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARE TIPS -->
+    <section id="tips" class="bg-lime-900 text-white py-20">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <span class="uppercase text-lime-400 text-sm">FREE BONUS</span>
+                    <h2 class="text-5xl font-bold tracking-tighter mt-4">Rodent Care Guide</h2>
+                    <p class="mt-6 text-lime-200">Download our 28-page PDF packed with expert tips on diet, enrichment, health checks and more.</p>
+                    <button onclick="alert('📥 In a real site this would trigger a download. Thanks for visiting! 🐭')"
+                            class="mt-8 bg-white text-lime-900 px-9 py-4 rounded-3xl font-semibold inline-flex items-center gap-x-3">
+                        <i class="fa-solid fa-download"></i> 
+                        Get the free guide
+                    </button>
+                </div>
+                <div class="space-y-8 text-lg">
+                    <div class="flex gap-x-6">
+                        <div class="text-4xl">1️⃣</div>
+                        <div>Provide at least 1 sq ft of floor space per mouse</div>
+                    </div>
+                    <div class="flex gap-x-6">
+                        <div class="text-4xl">2️⃣</div>
+                        <div>Give them a wheel — rats need 12 inch diameter minimum!</div>
+                    </div>
+                    <div class="flex gap-x-6">
+                        <div class="text-4xl">3️⃣</div>
+                        <div>Change bedding weekly and spot clean daily</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact" class="bg-neutral-900 text-white py-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
+            <div class="md:col-span-5">
+                <div class="flex items-center gap-x-3 mb-6">
+                    <div class="text-5xl">🐭</div>
+                    <div class="text-4xl font-bold tracking-tighter">Mice Home</div>
+                </div>
+                <p class="max-w-sm text-neutral-400">
+                    Hyderabad, Telangana<br>
+                    Making tiny tails wag since 2023
+                </p>
+                <div class="mt-10 text-xs text-neutral-500">
+                    © 2026 Mice Home Private Limited. All rights reserved.<br>
+                    Not affiliated with any actual cats.
+                </div>
+            </div>
+            
+            <div class="md:col-span-3">
+                <div class="uppercase text-xs tracking-widest mb-6 text-neutral-400">Quick Links</div>
+                <div class="space-y-3 text-sm">
+                    <a href="#" class="block hover:text-lime-400">Shop All Habitats</a>
+                    <a href="#" class="block hover:text-lime-400">Accessories &amp; Toys</a>
+                    <a href="#" class="block hover:text-lime-400">Care Guides</a>
+                    <a href="#" class="block hover:text-lime-400">Track Your Order</a>
+                </div>
+            </div>
+            
+            <div class="md:col-span-4">
+                <div class="uppercase text-xs tracking-widest mb-6 text-neutral-400">Say hello</div>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Your name" 
+                           class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-lime-400">
+                    <input type="email" placeholder="Email address" 
+                           class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-lime-400">
+                    <textarea placeholder="How can we help your little ones?" rows="3"
+                              class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-lime-400"></textarea>
+                    <button type="button" onclick="alert('❤️ Message received! We’ll reply within 24 hours 🐀')"
+                            class="w-full bg-lime-500 hover:bg-lime-400 py-5 rounded-3xl font-semibold">
+                        Send message
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="text-center text-xs text-neutral-500 mt-20">
+            Made with ❤️ and lots of cheese for every mouse and rat out there
+        </div>
+    </footer>
+
+    <script>
+        function addToCart(btn) {
+            btn.textContent = "✅ Added!";
+            btn.style.backgroundColor = "#166534";
+            setTimeout(() => {
+                btn.textContent = "Add to cart 🛒";
+                btn.style.backgroundColor = "";
+            }, 1800);
+        }
+        
+        // Tailwind script already loaded via CDN
+        console.log('%c🐭 Mice Home website ready! Enjoy your new rodent empire 🐀', 'color:#84cc16; font-family:monospace');
+    </script>
+</body>
+</html>
